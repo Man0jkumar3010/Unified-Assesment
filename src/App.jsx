@@ -22,18 +22,20 @@ function App() {
   };
 
   return (
-    <div className="container px-4 py-6 body">
+    <div className="container mx-auto px-2 sm:px-4 py-4 sm:py-6 body min-h-screen">
       <div
-        className="flex justify-between items-center mb-8"
-        style={{ marginBottom: "80px" }}
+        className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6 sm:mb-8 space-y-4 sm:space-y-0"
+        style={{ marginBottom: "40px" }}
       >
-        <h1 className="text-2xl font-bold">Team Members</h1>
+        <h1 className="text-xl sm:text-2xl font-bold text-center sm:text-left">
+          Team Members
+        </h1>
 
-        <div className="flex items-center space-x-2 gap-3">
+        <div className="mb-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-3 md:gap-4 lg:gap-5">
           <Input
             type="text"
             placeholder="Search Team Member"
-            className="w-64"
+            className="w-full sm:w-64"
             onChange={handleSearchTeamMember}
             value={searchMember}
           />

@@ -41,8 +41,8 @@ export const MemberViewList = ({ member }) => {
                     status === "Active"
                       ? "bg-green-400 text-white"
                       : "bg-red-500 text-white"
-                    }`}
-                  style={{padding:"2px",marginTop:"5px"}}
+                  }`}
+                  style={{ padding: "2px", marginTop: "5px" }}
                 >
                   {status}
                 </div>
@@ -62,7 +62,7 @@ export const MemberViewList = ({ member }) => {
               </Button>
             </DialogTrigger>
             <DialogContent
-              className=" sm:max-w-md bg-white rounded-2xl shadow-lg p-2
+              className="w-[95vw] max-w-md sm:max-w-md bg-white rounded-2xl shadow-lg p-2
               transition-all duration-300 ease-in-out 
               data-[state=open]:animate-fadeIn 
               data-[state=closed]:animate-fadeOut"
@@ -73,17 +73,20 @@ export const MemberViewList = ({ member }) => {
                   Member Details
                 </DialogTitle>
               </DialogHeader>
-              <Tabs defaultValue="profile" className="w-[400px] mt-4">
+              <Tabs
+                defaultValue="profile"
+                className="w-full max-w-[400px] mt-4"
+              >
                 <TabsList className="grid w-full grid-cols-2 rounded-xl bg-gray-100 p-1">
                   <TabsTrigger
                     value="profile"
-                    className="data-[state=active]:bg-amber-500 data-[state=active]:text-white rounded-lg transition-colors"
+                    className="data-[state=active]:bg-amber-500 data-[state=active]:text-white rounded-lg transition-colors text-xs sm:text-sm"
                   >
                     Profile
                   </TabsTrigger>
                   <TabsTrigger
                     value="projects"
-                    className="data-[state=active]:bg-amber-500 data-[state=active]:text-white rounded-lg transition-colors"
+                    className="data-[state=active]:bg-amber-500 data-[state=active]:text-white rounded-lg transition-colors text-xs sm:text-sm"
                   >
                     Projects
                   </TabsTrigger>

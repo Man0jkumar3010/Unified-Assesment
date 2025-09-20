@@ -14,21 +14,29 @@ export const SelectList = ({ roles, onRoleSelect }) => {
 
   return (
     <>
-      <div>
-        <Select onValueChange={handleRoleSelect}>
-          <SelectTrigger className="w-[180px]">
+      <div className="w-full sm:w-[180px]">
+        <Select
+          onValueChange={handleRoleSelect}
+          style={{ padding: "10px", border: "2px solid red" }}
+        >
+          <SelectTrigger className="w-full p-20">
             <SelectValue placeholder=" Select Role" />
           </SelectTrigger>
-          <SelectContent>
-            <SelectContent>
-              <ScrollArea className="h-[65px] ">
-                {roles.map((role, index) => (
-                  <SelectItem key={index} value={role}>
-                    {role}
-                  </SelectItem>
-                ))}
-              </ScrollArea>
-            </SelectContent>
+          <SelectContent
+            className="bg-slate-800 text-white"
+            style={{ padding: "5px" }}
+          >
+            <ScrollArea className="h-[65px] ">
+              {roles.map((role, index) => (
+                <SelectItem
+                  key={index}
+                  value={role}
+                  className="hover:bg-slate-500"
+                >
+                  {role}
+                </SelectItem>
+              ))}
+            </ScrollArea>
           </SelectContent>
         </Select>
       </div>
