@@ -1,0 +1,25 @@
+Approach
+
+I built this application using a component-based approach in React, focusing on reusability and clarity.
+
+1. MainView Component
+- Serves as the main layout for the team members list.
+- Accepts props to make it reusable for similar views in the future.
+
+2. MemberViewList Component
+- Child of MainView.
+- Displays a grid of member cards showing avatar, name, role, and status.
+- Clicking a card opens a modal with more details.
+
+3. SelectList Component
+- Reusable dropdown component for role filtering.
+- Can be used for additional filters in the future.
+
+4. Modal with Tabs
+- Shows detailed information about a member.
+- Tabs separate Profile and Projects for better organization.
+
+Why this approach:
+- Components are modular and reusable.
+- Layout and logic are clearly separated.
+- Easy to extend or add new features later.
